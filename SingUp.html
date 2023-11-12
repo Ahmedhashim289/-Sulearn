@@ -1,0 +1,145 @@
+
+
+
+
+<html>
+
+
+    <head>
+    
+        <style>
+            
+            *{
+                margin:0;
+                padding:0; 
+                font-family:cairo; 
+            }
+            body{
+                background-color:#eee; 
+            }
+            main{
+                width:100%;
+            }
+            main p{
+                font-size:140%;
+                text-align:center;
+                padding:2%;
+                margin-top:20%;
+                color:rgba(97, 80, 84, 1);
+            }
+            main hr {
+                border:1px solid rgba(237, 25, 83, 1);
+                width:40%;
+                margin-bottom:10%;
+            }
+            main input{
+                display:block;
+                margin:0 auto;
+                text-align:right;
+                width:60%;
+                margin-bottom:5%;
+                padding:1.5%;
+                padding-right:3%;
+                border:none;
+                border-radius:5px;
+                box-shadow:1px 1px 10px #ddd;
+                font-size:85%;
+                color:rgba(97, 80, 84, 1);
+            }
+            main button{
+                width:60%;
+                display:block;
+                margin: 0 auto;
+                background-color:rgba(237, 25, 83, 1);
+                border:none;
+                padding:1.5%;
+                font-size:90%;
+                color:#eee;
+                font-weight:600;
+                border-radius:10px;
+            }
+
+            main .email {
+                text-align:center;
+                font-size:85%;
+                width:60%;
+                margin:0 auto;
+                margin-top:5%;
+                background-color:rgba(237, 25, 83, 0.2);
+                padding:3%;
+                color:rgba(220, 25, 83, 1);
+            }
+            .pass{
+                text-align:center;
+                font-size:85%;
+                width:60%;
+                margin:0 auto;
+                margin-top:5%;
+                background-color:rgba(237, 25, 83, 0.2);
+                padding:3%;
+                color:rgba(220, 25, 83, 1);
+            }
+            .empty{
+                text-align:center;
+                font-size:85%;
+                width:60%;
+                margin:0 auto;
+                margin-top:5%;
+                background-color:rgba(237, 25, 83, 0.2);
+                padding:3%;
+                color:rgba(220, 25, 83, 1);
+            }
+            .name {
+                text-align:center;
+                font-size:85%;
+                width:60%;
+                margin:0 auto;
+                margin-top:5%;
+                background-color:rgba(237, 25, 83, 0.2);
+                padding:3%;
+                color:rgba(220, 25, 83, 1);
+
+            }
+            .done{
+                width:100%;
+                height:100%;
+                background-color:#eee;
+                margin-top:-200%;
+                position:relative;
+                z-index:4;
+                color:#000;
+               
+               
+            }
+            .done .p{
+                font-size:110%;
+                margin-top:30%;
+                color:rgba(0,200,80,1);
+                background-color:rgba(0,200,80,0.1);
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+       
+        <main>
+           
+            <p>تسجيل جديد</p>
+            <hr>
+            <form method="post" action="SingUp.php">
+                    <input name="name" type="text" placeholder="إسم الطالب"/>
+                    <input name="email" type="text" placeholder="الإيميل"/>
+                    <input name="pass" type="text" placeholder="كلمة السر"/>
+                    <input name="repass" type="text" placeholder=" تأكيد كلمة السر"/>
+
+                    <button name="signup">تسجيل</button>
+            </form> 
+           
+        </main>
+    
+    </body>
+
+
+</html>

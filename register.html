@@ -1,0 +1,111 @@
+<?php 
+    
+    $host = "localhost" ; 
+    $user = "root" ;
+    $password ="";
+    $db = "sulearn"; 
+    $con = mysqli_connect($host , $user , $password , $db);
+    
+
+    if(isset($_POST['signup'])){
+       
+      
+       $email = $_POST['email'];
+       $pass = $_POST['pass'] ;
+        $res = mysqli_query($con ,"select * from student" ) ;
+
+        while($row = mysqli_fetch_array($res)){
+
+            
+          if($pass ===$row['password'] && $email === $row['email']){
+            header('location:confirm_login.php');
+          }
+         
+          
+        
+        }
+    }
+
+    
+
+
+?>
+
+
+<html>
+    <head>
+        <style>
+              *{
+                margin:0;
+                padding:0; 
+                font-family:cairo; 
+            }
+            body{
+                background-color:#eee; 
+            }
+            main{
+                width:100%;
+            }
+            main p{
+                font-size:140%;
+                text-align:center;
+                padding:2%;
+                margin-top:20%;
+                color:rgba(97, 80, 84, 1);
+            }
+            main hr {
+                border:1px solid rgba(237, 25, 83, 1);
+                width:40%;
+                margin-bottom:10%;
+            }
+            main input{
+                display:block;
+                margin:0 auto;
+                text-align:right;
+                width:60%;
+                margin-bottom:5%;
+                padding:1.5%;
+                padding-right:3%;
+                border:none;
+                border-radius:5px;
+                box-shadow:1px 1px 10px #ddd;
+                font-size:85%;
+                color:rgba(97, 80, 84, 1);
+            }
+            main button{
+                width:60%;
+                display:block;
+                margin: 0 auto;
+                background-color:rgba(237, 25, 83, 1);
+                border:none;
+                padding:1.5%;
+                font-size:90%;
+                color:#eee;
+                font-weight:600;
+                border-radius:10px;
+            }
+        
+        
+        
+        </style>
+    </head>
+    <body>
+                <main>
+                    
+                    <p>تسجيل الدخول</p>
+                    <hr>
+                    <form method="post" action = "register.php">
+                            <input name="email" type="text" placeholder="الإيميل"/>
+                            <input name="pass" type="text" placeholder="كلمة السر"/>
+                           
+
+                            <button name="signup">تسجيل الدخول</button>
+                    </form>
+                   
+                            
+                    
+                </main>
+    </body>
+
+
+</html>
